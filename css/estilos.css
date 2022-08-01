@@ -21,25 +21,25 @@ a {
 }
 
 ul {
-  margin: 20px;
-  padding: 10px;
+  margin: 2px;
+  padding: 1px;
   list-style: none;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: x-large;
+  background-color: #f96305;
 }
 
 h1 {
   display: flex;
   justify-content: space-around;
   list-style: none;
-  margin: 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
 }
 
 p {
-   display: flex;
   align-items: center;
   text-align: center;
   margin: 25px;
@@ -60,6 +60,75 @@ p {
   text-align: center;
 }
 
+/*hostels*/
+#hostels {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+  background-color: #edede9; }
+
+.hostels1 {
+  grid-column: 1 / 13;
+  grid-row: 2;
+  text-align: center; }
+
+.hostels2 {
+  grid-column: 2 / 12;
+  grid-row: 3;
+  text-align: center;
+  font-size: larger; }
+
+.Habitacion1 {
+  grid-column: 2 / 12;
+  grid-row: 4;
+  text-align: center; }
+
+.Habitacion2 {
+  grid-column: 2 / 12;
+  grid-row: 5;
+  text-align: center; }
+
+.Habitacion3 {
+  grid-column: 2 / 12;
+  grid-row: 6;
+  text-align: center; }
+
+.productos {
+  display: flex;
+  margin: 20px;
+  justify-content: space-around; 
+  text-align: center; }
+
+.card, .card button:hover {
+  transition: 0.3s;
+  width: 100%;
+  object-fit: cover;
+  border: #f96305 solid 5px;
+  border-radius: 5px;
+  margin: 5px; }
+
+.card:hover, .card button:hover {
+  object-fit: cover;
+  border: #f96305 solid 2px;
+  border-radius: 2px; }
+
+.card button, .card button:hover button {
+  font-family: 'roboto';
+  border: none;
+  padding: 1px;
+  color: white;
+  background-color: #f96305;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px; }
+
+.card button:hover {
+  border: #05243b solid 3px; }
+
+
+  
 
 /* Footer */
 
@@ -112,9 +181,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 77.5rem
-
-  /* 1240px */
+@media only screen and (max-width: 768px
 ) {
   .ft-main {
     justify-content: space-evenly;
@@ -160,3 +227,25 @@ body {
 .ft-legal-list li:nth-last-child(2) {
   flex: 1;
 }
+
+
+
+@media screen and (max-width: 2300px) {
+  #productos #hostels {
+    display: block;
+    text-align: center;
+    position: relative; }
+ 
+  }
+  @media screen and (max-width: 768px) {
+    .productos {
+      display: block;
+      width: 98%; }
+    .Habitacion2, .Habitacion3, .logo {
+      display: none; }
+    li {
+      display: block;
+      margin: 0;
+      padding: 10px;
+      list-style: none;
+      border-bottom: 1px solid grey; } }
